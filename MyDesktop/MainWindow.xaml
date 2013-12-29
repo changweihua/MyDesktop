@@ -1,0 +1,15 @@
+﻿<mui:ModernWindow x:Class="MyDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="MainWindow" Height="350" Width="525">
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroupCollection>
+            <mui:LinkGroup GroupName="Hello" DisplayName="Hello">
+                <mui:LinkGroup.Links>
+                    <mui:Link Source="/ViewModels/ChildView.xaml" DisplayName="Click me"></mui:Link>
+                </mui:LinkGroup.Links>
+            </mui:LinkGroup>
+        </mui:LinkGroupCollection>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>

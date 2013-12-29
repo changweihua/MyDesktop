@@ -1,0 +1,24 @@
+﻿<Application x:Class="MyDesktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyDesktop"
+             xmlns:svcs="clr-namespace:MyDesktop.Services">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- WPF 4.0 workaround -->
+            <Style TargetType="{x:Type Rectangle}" />
+            <!-- end of workaround -->
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary>
+                    <local:AppBootstrapper x:Key="bootstrapper" />
+                    <svcs:CaliburnContentLoader x:Key="CaliburnContentLoader" />
+                </ResourceDictionary>
+
+                <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.xaml" />
+                <ResourceDictionary Source="/FirstFloor.ModernUI;component/Assets/ModernUI.Light.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
