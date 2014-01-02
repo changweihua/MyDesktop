@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="MyDesktop.Views.Network.LocalIPSettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:osb="clr-namespace:Xceed.Wpf.Toolkit.Obselete;assembly=WPFToolkit.Extended"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <RadioButton GroupName="GroupIP" Margin="10" Content="自动获取 IP 地址" />
+        <GroupBox Background="Transparent">
+            <GroupBox.Header>
+                <RadioButton GroupName="GroupIP" Content="使用下面的 IP 地址" />
+            </GroupBox.Header>
+            <GroupBox.Content>
+                <StackPanel Margin="5">
+                    <TextBlock Text="IP 地址" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBo1x" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBox2" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBox3" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBox4" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                </StackPanel>
+            </GroupBox.Content>
+        </GroupBox>
+        <RadioButton GroupName="GroupDNS" Margin="10" Content="自动获取 IP 地址" />
+        <GroupBox Background="Transparent">
+            <GroupBox.Header>
+                <RadioButton GroupName="GroupDNS" Content="使用下面的 IP 地址" />
+            </GroupBox.Header>
+            <GroupBox.Content>
+                <StackPanel Margin="5">
+                    <TextBlock Text="IP 地址" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBox5" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                    <xctk:MaskedTextBox Foreground="Blue" CaretIndex="0" BorderThickness="0" Grid.Column="1" x:Name="_maskedTextBox6" Mask="000.000.000.000"  ValueDataType="{x:Type s:String}" />
+                </StackPanel>
+            </GroupBox.Content>
+        </GroupBox>
+    </StackPanel>
+</UserControl>
